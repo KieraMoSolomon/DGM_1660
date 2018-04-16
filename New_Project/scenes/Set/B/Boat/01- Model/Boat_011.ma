@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: Boat_011.ma
-//Last modified: Mon, Apr 16, 2018 12:30:12 PM
+//Last modified: Mon, Apr 16, 2018 12:31:22 PM
 //Codeset: UTF-8
 requires maya "2017ff04";
 currentUnit -l centimeter -a degree -t film;
@@ -9738,6 +9738,15 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+select -ne :modelPanel1ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+select -ne :modelPanel2ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape3.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape3.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape3.cmcp";
